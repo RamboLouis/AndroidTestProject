@@ -1,0 +1,66 @@
+package com.example.rambolu.androidactivity.ListActivity;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.rambolu.androidactivity.R;
+
+import java.util.LinkedList;
+
+/**
+ * Created by RamboLu on 2017/6/12.
+ */
+public class AnimalAdapter extends BaseAdapter {
+
+    private LinkedList<Animal> animalData;
+    private Context animalContext;
+
+    public AnimalAdapter(LinkedList<Animal> animalData, Context animalContext) {
+        this.animalData = animalData;
+        this.animalContext = animalContext;
+    }
+
+    @Override
+    public int getCount() {
+        return animalData.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup parent) {
+//        convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list_animal,parent,false);
+//        ImageView img_icon = (ImageView) convertView.findViewById(R.id.img_icon);
+//        TextView txt_aName = (TextView) convertView.findViewById(R.id.txt_aName);
+//        TextView txt_aSpeak = (TextView) convertView.findViewById(R.id.txt_aSpeak);
+//        img_icon.setBackgroundResource(mData.get(position).getaIcon());
+//        txt_aName.setText(mData.get(position).getaName());
+//        txt_aSpeak.setText(mData.get(position).getaSpeak());
+//        return convertView;
+//    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        convertView = LayoutInflater.from(animalContext).inflate(R.layout.list_item_animal,parent,false);
+        ImageView img_icon = (ImageView)convertView.findViewById(R.id.listAnimalImageView);
+        TextView name_text = (TextView)convertView.findViewById(R.id.listAnimalMainName);
+        TextView subName_text = (TextView)convertView.findViewById(R.id.listAnimalSubName);
+        img_icon.setImageResource(animalData.get(position).getIcons());
+        name_text.setText(animalData.get(position).getNames());
+        subName_text.setText(animalData.get(position).getSpeaks());
+        return convertView;
+    }
+}

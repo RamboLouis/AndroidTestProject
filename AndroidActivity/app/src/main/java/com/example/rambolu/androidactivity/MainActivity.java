@@ -9,11 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.readystatesoftware.systembartint.SystemBarTintManager;
-
 public class MainActivity extends BaseActivity {
 
-    Button mainButton,mainButton1,mainButton2,mainButton3;
+    Button mainButton,mainButton1,mainButton2,mainButton3,mainButton4;
     EditText mainEditText,mainEditText1;
     String name,sex;
 
@@ -30,7 +28,11 @@ public class MainActivity extends BaseActivity {
 //        tintManager.setStatusBarTintEnabled(true);
 //        // enable navigation bar tint
 //        tintManager.setNavigationBarTintEnabled(true);
-
+////        tintManager.setTintColor(Color.parseColor("#99000FF"));
+//        tintManager.setTintColor(Color.parseColor("#99000FF"));
+//        Window window = getWindow();
+//        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//        window.setStatusBarColor(getResources().getColor(R.color.black));
     }
 
     void clickBtn() {
@@ -85,13 +87,24 @@ public class MainActivity extends BaseActivity {
 //                startActivity(intent);
             }
         });
+
+        mainButton3 = (Button)findViewById(R.id.mainButton3);
+        mainButton3.setText("按钮3");
+        mainButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,TestActivity.class));
+            }
+        });
+
+
         mainEditText = (EditText)findViewById(R.id.mainEditText);
         mainEditText1 = (EditText)findViewById(R.id.mainEditText1);
 
-        mainButton3 = (Button) findViewById(R.id.mainButton3);
-        mainButton3.setText("确定");
+        mainButton4 = (Button) findViewById(R.id.mainButton4);
+        mainButton4.setText("确定");
 
-        mainButton3.setOnClickListener(new View.OnClickListener() {
+        mainButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 name = mainEditText.getText().toString();

@@ -10,7 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Main">
+            android:theme="@style/MainTheme">
+            <!--android:label="Main">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,7 +35,11 @@
             android:name=".UserActivity"
             android:label="User">
         </activity>
-        <activity android:name=".TestActivity" />
+        <activity
+            android:name=".TestActivity"
+            android:label="Test">
+
+        </activity>
         <activity
             android:name=".ImageActivity"
             android:label="Image">
