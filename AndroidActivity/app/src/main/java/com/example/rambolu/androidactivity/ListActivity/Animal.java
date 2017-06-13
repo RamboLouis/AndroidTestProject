@@ -5,12 +5,13 @@ package com.example.rambolu.androidactivity.ListActivity;
  */
 
 public class Animal {
+
     private String name;
     private String speak;
     private int icon;
 
-    public Animal() {
-    }
+//    public Animal() {
+//    }
 
     public Animal(String Name, String Speak, int Icon) {
         this.name = Name;

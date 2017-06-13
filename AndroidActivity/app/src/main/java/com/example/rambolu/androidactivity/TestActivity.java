@@ -37,7 +37,10 @@ public class TestActivity extends BaseActivity {
         animalDate.add(new Animal("主题5","副标题5", R.mipmap.icon5));
         animalDate.add(new Animal("主题6","副标题6", R.mipmap.icon6));
         animalDate.add(new Animal("主题7","副标题7", R.mipmap.icon7));
-        animalAdapter = new AnimalAdapter(animalDate,animalContext);
+        animalDate.add(new Animal("主题8","副标题8", R.mipmap.icon8));
+        animalDate.add(new Animal("主题9","副标题9", R.mipmap.icon9));
+        animalDate.add(new Animal("主题10","副标题10", R.mipmap.icon10));
+        animalAdapter = new AnimalAdapter((LinkedList<Animal>) animalDate,animalContext);
         animalList.setAdapter(animalAdapter);
 
     }
