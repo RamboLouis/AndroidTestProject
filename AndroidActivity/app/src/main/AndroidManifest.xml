@@ -11,21 +11,23 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/MainTheme">
-            <!--android:label="Main">-->
+
+            <!-- android:label="Main"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="Home">
-        </activity>
+            android:label="Home"></activity>
         <activity
             android:name=".OtherActivity"
             android:label="Other">
             <intent-filter>
                 <action android:name="other_action" />
+
                 <category android:name="other_category" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -33,17 +35,14 @@
         <activity android:name=".BaseActivity" />
         <activity
             android:name=".UserActivity"
-            android:label="User">
-        </activity>
+            android:label="User"></activity>
         <activity
             android:name=".TestActivity"
-            android:label="Test">
-
-        </activity>
+            android:label="Test"></activity>
         <activity
             android:name=".ImageActivity"
-            android:label="Image">
-        </activity>
+            android:label="Image"></activity>
+        <activity android:name=".InfoActivity"></activity>
     </application>
 
 </manifest>
