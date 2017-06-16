@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.example.rambolu.androidactivity.ListActivity.Animal;
 import com.example.rambolu.androidactivity.ListActivity.AnimalAdapter;
 
@@ -23,6 +22,17 @@ public class TestActivity extends BaseActivity {
     private AnimalAdapter animalAdapter;
     private ListView animalList;
 
+    private int[] icons = new int[] {
+            R.mipmap.icon1,
+            R.mipmap.icon2,
+            R.mipmap.icon3,
+            R.mipmap.icon4,
+            R.mipmap.icon5,
+            R.mipmap.icon6,
+            R.mipmap.icon7,
+            R.mipmap.icon8,
+            R.mipmap.icon9,
+            R.mipmap.icon10};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,16 +51,19 @@ public class TestActivity extends BaseActivity {
         View footView = inflater.inflate(R.layout.view_footer, null, false);
 
         animalDate = new LinkedList<>();
-        animalDate.add(new Animal("主题1","副标题1", R.mipmap.icon1));
-        animalDate.add(new Animal("主题2","副标题2", R.mipmap.icon2));
-        animalDate.add(new Animal("主题3","副标题3", R.mipmap.icon3));
-        animalDate.add(new Animal("主题4","副标题4", R.mipmap.icon4));
-        animalDate.add(new Animal("主题5","副标题5", R.mipmap.icon5));
-        animalDate.add(new Animal("主题6","副标题6", R.mipmap.icon6));
-        animalDate.add(new Animal("主题7","副标题7", R.mipmap.icon7));
-        animalDate.add(new Animal("主题8","副标题8", R.mipmap.icon8));
-        animalDate.add(new Animal("主题9","副标题9", R.mipmap.icon9));
-        animalDate.add(new Animal("主题10","副标题10", R.mipmap.icon10));
+        for (int i = 0; i < 10; i++) {
+            animalDate.add(new Animal("主题"+i,"副标题"+i,icons[i]));
+        }
+//        animalDate.add(new Animal("主题1","副标题1", R.mipmap.icon1));
+//        animalDate.add(new Animal("主题2","副标题2", R.mipmap.icon2));
+//        animalDate.add(new Animal("主题3","副标题3", R.mipmap.icon3));
+//        animalDate.add(new Animal("主题4","副标题4", R.mipmap.icon4));
+//        animalDate.add(new Animal("主题5","副标题5", R.mipmap.icon5));
+//        animalDate.add(new Animal("主题6","副标题6", R.mipmap.icon6));
+//        animalDate.add(new Animal("主题7","副标题7", R.mipmap.icon7));
+//        animalDate.add(new Animal("主题8","副标题8", R.mipmap.icon8));
+//        animalDate.add(new Animal("主题9","副标题9", R.mipmap.icon9));
+//        animalDate.add(new Animal("主题10","副标题10", R.mipmap.icon10));
         animalAdapter = new AnimalAdapter((LinkedList<Animal>) animalDate,animalContext);
 
         // 添加表头表尾需要卸载set方法
