@@ -33,6 +33,7 @@ public class TestActivity extends BaseActivity {
             R.mipmap.icon8,
             R.mipmap.icon9,
             R.mipmap.icon10};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,9 @@ public class TestActivity extends BaseActivity {
         setUI();
     }
 
+    /**
+     *
+     */
     void setUI() {
         animalContext = TestActivity.this;
         animalList = (ListView)findViewById(R.id.testListView);
@@ -74,10 +78,25 @@ public class TestActivity extends BaseActivity {
         animalList.setVerticalScrollBarEnabled(true);
 
         animalList.setAdapter(animalAdapter);
+
+        /*
+         * 单击item点击事件
+         */
         animalList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(animalContext,"你点击了第" + position + "项",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        /*
+         * 长按item点击事件
+         */
+        animalList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(animalContext,"你长按了第" + position + "项",Toast.LENGTH_SHORT).show();
+                return true;
             }
         });
     }
