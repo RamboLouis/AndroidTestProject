@@ -42,32 +42,22 @@ public class TestActivity extends BaseActivity {
         setUI();
     }
 
-    /**
-     *
-     */
+
     void setUI() {
         animalContext = TestActivity.this;
         animalList = (ListView)findViewById(R.id.testListView);
 
-        //动态加载顶部View和底部View
+        // 动态加载顶部View和底部View
         LayoutInflater inflater = LayoutInflater.from(this);
         View headView = inflater.inflate(R.layout.view_header, null, false);
         View footView = inflater.inflate(R.layout.view_footer, null, false);
 
         animalDate = new LinkedList<>();
-        for (int i = 0; i < 10; i++) {
-            animalDate.add(new Animal("主题"+i,"副标题"+i,icons[i]));
+        Log.d(TAG, "图片数组常长度"+icons.length);
+        for (int i = 0; i < icons.length; i++) {
+            animalDate.add(new Animal("主题"+(i+1),"副标题"+(i+1),icons[i]));
         }
-//        animalDate.add(new Animal("主题1","副标题1", R.mipmap.icon1));
-//        animalDate.add(new Animal("主题2","副标题2", R.mipmap.icon2));
-//        animalDate.add(new Animal("主题3","副标题3", R.mipmap.icon3));
-//        animalDate.add(new Animal("主题4","副标题4", R.mipmap.icon4));
-//        animalDate.add(new Animal("主题5","副标题5", R.mipmap.icon5));
-//        animalDate.add(new Animal("主题6","副标题6", R.mipmap.icon6));
-//        animalDate.add(new Animal("主题7","副标题7", R.mipmap.icon7));
-//        animalDate.add(new Animal("主题8","副标题8", R.mipmap.icon8));
-//        animalDate.add(new Animal("主题9","副标题9", R.mipmap.icon9));
-//        animalDate.add(new Animal("主题10","副标题10", R.mipmap.icon10));
+
         animalAdapter = new AnimalAdapter((LinkedList<Animal>) animalDate,animalContext);
 
         // 添加表头表尾需要卸载set方法

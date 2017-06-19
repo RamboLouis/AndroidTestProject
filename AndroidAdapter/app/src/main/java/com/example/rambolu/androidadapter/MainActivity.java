@@ -1,9 +1,9 @@
 package com.example.rambolu.androidadapter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.rambolu.androidadapter.Base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
