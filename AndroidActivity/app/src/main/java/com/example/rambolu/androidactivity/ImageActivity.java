@@ -63,7 +63,6 @@ public class ImageActivity extends BaseActivity {
             //获取对应的view
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                //Log.d(TAG, "getView--->position:" + position + "--->convertView:" + convertView + "--->parent:" + parent);
                 ImageView imageView;
                 if (convertView == null){
                     imageView = new ImageView(ImageActivity.this);
@@ -78,6 +77,7 @@ public class ImageActivity extends BaseActivity {
                 return imageView;
             }
         };
+
         Log.d(TAG, "setAdapter--->");
         gridView.setAdapter(baseAdapter);
 

@@ -58,6 +58,10 @@ public class TestActivity extends BaseActivity {
             animalDate.add(new Animal("主题"+(i+1),"副标题"+(i+1),icons[i]));
         }
 
+        for (int icon : icons){
+            Log.d(TAG, "icon图片："+icon);
+        }
+
         animalAdapter = new AnimalAdapter((LinkedList<Animal>) animalDate,animalContext);
 
         // 添加表头表尾需要卸载set方法

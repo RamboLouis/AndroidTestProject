@@ -29,6 +29,7 @@ public class HomeActivity extends BaseActivity {
             "我就是子标题4",
             "我就是子标题5",
             "我就是子标题6"};
+
     int[] imgId = new int[]{
             R.mipmap.icon1,
             R.mipmap.icon2,
@@ -55,22 +56,16 @@ public class HomeActivity extends BaseActivity {
     }
 
     void setSimpleAdapter() {
-//        List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>();
+        //List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>();
         List<Map<String, Object>> listitem = new ArrayList();
         for (int i = 0; i < name.length; i++) {
-//            Map<String, Object> showitem = new HashMap<String, Object>();
+            //Map<String, Object> showitem = new HashMap<String, Object>();
             Map<String, Object> showitem = new HashMap();
             showitem.put("icon", imgId[i]);
             showitem.put("name", name[i]);
             showitem.put("subName", subName[i]);
             listitem.add(showitem);
         }
-//        simpleAdapter = new SimpleAdapter(
-//                getApplicationContext(),
-//                listitem,
-//                R.layout.list_item,
-//                new String[]{"icon", "name", "subName"},
-//                new int[]{R.id.listImageView, R.id.listMainName, R.id.listSubName});
         simpleAdapter = new SimpleAdapter(
                 this,
                 listitem,
