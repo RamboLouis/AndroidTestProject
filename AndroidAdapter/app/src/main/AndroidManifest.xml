@@ -18,9 +18,15 @@
         </activity>
         <activity android:name=".Base.BaseActivity" />
         <activity
-            android:name=".Adapter.ArrayAdapterListViewActivity"
-            android:label="ArrayAdapterListView"></activity>
-        <activity android:name=".Adapter.SimpleAdapterListViewActivity"></activity>
+            android:name=".Activity.ArrayAdapterListViewActivity"
+            android:label="ArrayAdapterListView" />
+        <activity
+            android:name=".Activity.SimpleAdapterListViewActivity"
+            android:label="SimpleAdapterLIstView"/>
+        <activity
+            android:name=".Activity.CustomBaseAdapterListViewActivity"
+            android:label="CustomBaseAdapterListView">
+        </activity>
     </application>
 
 </manifest>

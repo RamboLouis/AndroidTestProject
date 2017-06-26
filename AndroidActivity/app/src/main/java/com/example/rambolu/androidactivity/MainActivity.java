@@ -89,7 +89,7 @@ public class MainActivity extends BaseActivity {
         });
 
         mainButton3 = (Button)findViewById(R.id.mainButton3);
-        mainButton3.setText("按钮3");
+        mainButton3.setText("按钮4");
         mainButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

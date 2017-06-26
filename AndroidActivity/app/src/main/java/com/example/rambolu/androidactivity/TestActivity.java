@@ -17,7 +17,6 @@ import java.util.List;
 public class TestActivity extends BaseActivity {
 
     private List<Animal> animalDate;
-    //    private LinkedList<Animal> animalDate;
     private Context animalContext;
     private AnimalAdapter animalAdapter;
     private ListView animalList;

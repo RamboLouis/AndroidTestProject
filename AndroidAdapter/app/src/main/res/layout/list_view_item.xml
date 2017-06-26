@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/listItemIcon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:baselineAlignBottom="true"
-        android:paddingLeft="8dp"/>
+        android:id="@+id/customImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/customTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@+id/customImageView"
+        app:layout_constraintLeft_toRightOf="@+id/customImageView" />
 
-        <TextView
-            android:id="@+id/listItemName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:textColor="#1D1D1C"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/customTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="0dp"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/customTextView"
+        app:layout_constraintLeft_toLeftOf="@+id/customTextView" />
 
-        <TextView
-            android:id="@+id/listItemSubName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="18px"
-            android:textColor="#B4B4B9"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-</LinearLayout>
+    <TextView
+        android:id="@+id/customTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@+id/customTextView2"
+        app:layout_constraintTop_toBottomOf="@id/customTextView2"/>
+</android.support.constraint.ConstraintLayout>

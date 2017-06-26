@@ -1,4 +1,4 @@
-package com.example.rambolu.androidadapter.Adapter;
+package com.example.rambolu.androidadapter.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
