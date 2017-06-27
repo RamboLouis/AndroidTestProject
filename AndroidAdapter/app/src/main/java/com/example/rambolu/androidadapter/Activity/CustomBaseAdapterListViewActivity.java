@@ -45,7 +45,6 @@ public class CustomBaseAdapterListViewActivity extends BaseActivity {
         listViewModels = new LinkedList<>();
         context = CustomBaseAdapterListViewActivity.this;
         listView = (ListView)findViewById(R.id.customListView);
-        Log.d(TAG, "setUI: ");
         for (int i = 0; i < icons.length; i++) {
             listViewModels.add(new CustomListViewModel(
                     icons[i],
