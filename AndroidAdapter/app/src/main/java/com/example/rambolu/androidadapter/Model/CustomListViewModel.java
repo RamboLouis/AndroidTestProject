@@ -9,7 +9,7 @@ public class CustomListViewModel {
     private int icon;
     private String name;
     private String subName;
-    private String minName
+    private String minName;
 
     public CustomListViewModel(int icon,String name,String subName,String minName){
         this.icon = icon;

@@ -1,6 +1,7 @@
 package com.example.rambolu.androidadapter.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +26,7 @@ public class CustomBaseAdapter extends BaseAdapter {
     public CustomBaseAdapter(LinkedList<CustomListViewModel> listViewModel,Context context){
         this.listViewModel = listViewModel;
         this.context = context;
-    }
-
-    public CustomBaseAdapter() {
-        super();
+        Log.d("log", "CustomBaseAdapter: ");
     }
 
     @Override
@@ -48,10 +46,13 @@ public class CustomBaseAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.d("log", "getView: ");
         convertView = LayoutInflater.from(context).inflate(R.layout.list_view_item,parent,false);
+
+        Log.d("log", "getView: 2");
         ImageView icon = (ImageView)convertView.findViewById(R.id.customImageView);
         TextView name = (TextView)convertView.findViewById(R.id.customTextView);
-        TextView subName = (TextView)convertView.findViewById(R.id.textView2);
+        TextView subName = (TextView)convertView.findViewById(R.id.customTextView2);
         TextView minName = (TextView)convertView.findViewById(R.id.customTextView3);
         icon.setImageResource(listViewModel.get(position).getIcon());
         name.setText(listViewModel.get(position).getName());
@@ -59,4 +60,5 @@ public class CustomBaseAdapter extends BaseAdapter {
         minName.setText(listViewModel.get(position).getMinName());
         return convertView;
     }
+
 }
