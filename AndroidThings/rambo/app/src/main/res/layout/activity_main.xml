@@ -7,12 +7,29 @@
     tools:context="com.rambo.MainActivity">
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/textLeftView"
+        android:layout_width="281dp"
+        android:layout_height="100dp"
         android:text="1234"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textRightView"
+        android:layout_width="280dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="20dp"
+        android:text="1234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLeftView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textLeftView"
+        tools:layout_editor_absoluteY="42dp"/>
 
 </android.support.constraint.ConstraintLayout>
